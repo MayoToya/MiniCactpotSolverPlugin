@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Target">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>7.2</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Build">
+    <OutputType>Library</OutputType>
+    <OutputPath>$(SolutionDir)/bin</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Portable</DebugType>
+    <Authors>Mayo Toya</Authors>
+    <Company>dwyl works</Company>
+    <Description></Description>
+    <Product>Mini Cactpot Solver</Product>
+    <PackageId>MiniCactpotSolverPlugin</PackageId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyName>MiniCactpotSolverPlugin</AssemblyName>
+    <Version>2.0.0.0</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MessagePack" Version="2.1.115" />
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\GetMgpExpectationFunction.Composition\source\dwyl.GetMgpExpectationFunction.Composition\GetMgpExpectationFunction.Composition.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Dalamud">
+      <HintPath>$(appdata)\XIVLauncher\addon\Hooks\Dalamud.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+</Project>
